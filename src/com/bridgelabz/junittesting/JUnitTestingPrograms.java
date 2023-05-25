@@ -33,12 +33,23 @@ public class JUnitTestingPrograms {
     Celsius  = ((Fahrenheit-32)*5/9);
           System.out.println("Temperature in celsius is: "+Celsius);
 }
+public static void compoundInterest(double principal,double year,double rate,double number){
+                number=12*year;
 
+
+    double payment= (principal*rate) * (Math.pow((1 + rate/100), (number)));
+    System.out.println("monthly payment is : "+payment );
+}
 public static void main(String[] args) {
             int amount = 1072;
             countNotes(amount);
             temperaturConversionToFarhrenheit();
             fahrenheitToCelsius();
+            int p=Integer.parseInt(args[0]);
+            int y=Integer.parseInt(args[1]);
+            int r=Integer.parseInt(args[2]);
+            int n=Integer.parseInt(args[3]);
+            compoundInterest(p,y,r,n);
 
             }
         }
